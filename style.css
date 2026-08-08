@@ -16,7 +16,7 @@ body {
 }
 
 header {
-    min-height: 20vh;
+    min-height: 15vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
