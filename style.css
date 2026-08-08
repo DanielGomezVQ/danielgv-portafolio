@@ -16,7 +16,7 @@ body {
 }
 
 header {
-    min-height: 20vh;
+    min-height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,14 +76,28 @@ section p {
 
 .presentacion-contenido {
     display: grid;
-    grid-template-columns: 0.7fr 1.3fr;
-    gap: 40px;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 50px;
     align-items: center;
 }
 
 .presentacion-foto {
     display: flex;
     justify-content: center;
+}
+
+.foto-presentacion {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 7px solid #2563eb;
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.foto-presentacion:hover {
+    transform: scale(1.05);
 }
 
 .presentacion-video {
@@ -93,6 +107,7 @@ section p {
 .presentacion-video h3 {
     color: #1e3a8a;
     margin-bottom: 15px;
+    font-size: 1.4rem;
 }
 
 .video-placeholder {
@@ -113,55 +128,51 @@ section p {
     margin-bottom: 5px;
 }
 
-.perfil-contenedor {
+.contenido-principal {
     display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-columns: 0.9fr 1.1fr;
     gap: 30px;
     background: transparent;
     box-shadow: none;
     padding: 0;
 }
 
-.perfil-contenedor:hover {
+.contenido-principal:hover {
     transform: none;
     box-shadow: none;
 }
 
-.perfil-izquierda {
-    background: white;
-    padding: 40px;
-    border-radius: 18px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    text-align: center;
-    height: fit-content;
-}
-
-.perfil-izquierda h2 {
-    margin-top: 10px;
-}
-
-.foto-perfil {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 6px solid #2563eb;
-    margin-bottom: 15px;
-    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
-    transition: transform 0.3s ease;
-}
-
-.foto-perfil:hover {
-    transform: scale(1.05);
-}
-
-.perfil-derecha {
+.columna-izquierda,
+.columna-derecha {
     display: flex;
     flex-direction: column;
 }
 
-.perfil-derecha section {
+.columna-izquierda section,
+.columna-derecha section {
     margin-bottom: 30px;
+}
+
+#perfil {
+    text-align: left;
+}
+
+#contacto {
+    text-align: center;
+}
+
+#contacto p {
+    font-size: 1.05rem;
+}
+
+#contacto a {
+    color: #2563eb;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#contacto a:hover {
+    text-decoration: underline;
 }
 
 article {
@@ -239,24 +250,6 @@ article h3 {
     font-size: 1.3rem;
 }
 
-#contacto {
-    text-align: center;
-}
-
-#contacto p {
-    font-size: 1.1rem;
-}
-
-#contacto a {
-    color: #2563eb;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-#contacto a:hover {
-    text-decoration: underline;
-}
-
 footer {
     text-align: center;
     padding: 30px 20px;
@@ -284,10 +277,6 @@ header p {
 
 @media (max-width: 850px) {
 
-    .perfil-contenedor {
-        grid-template-columns: 1fr;
-    }
-
     .presentacion-contenido {
         grid-template-columns: 1fr;
     }
@@ -296,19 +285,19 @@ header p {
         text-align: center;
     }
 
-    .evidencias-grid {
+    .contenido-principal {
         grid-template-columns: 1fr;
     }
 
-    .perfil-izquierda {
-        text-align: center;
+    .evidencias-grid {
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 700px) {
 
     header {
-        min-height: 40vh;
+        min-height: 35vh;
     }
 
     header h1 {
@@ -331,9 +320,9 @@ header p {
         font-size: 1.6rem;
     }
 
-    .foto-perfil {
-        width: 140px;
-        height: 140px;
+    .foto-presentacion {
+        width: 190px;
+        height: 190px;
     }
 
     #habilidades ul,
