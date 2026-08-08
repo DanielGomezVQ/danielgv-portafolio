@@ -124,8 +124,14 @@ section p {
     color: #64748b;
 }
 
-.video-placeholder p {
-    margin-bottom: 5px;
+.video-presentacion {
+    width: 100%;
+    max-width: 650px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background: #111827;
 }
 
 .contenido-principal {
@@ -275,15 +281,16 @@ header p {
     animation: aparecer 1s ease;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 700px) {
 
     .presentacion-contenido {
         grid-template-columns: 1fr;
     }
 
-    .presentacion-video {
-        text-align: center;
-    }
+    .video-presentacion {
+    width: 100%;
+    border-radius: 12px;
+}
 
     .contenido-principal {
         grid-template-columns: 1fr;
