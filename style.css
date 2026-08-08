@@ -16,7 +16,7 @@ body {
 }
 
 header {
-    min-height: 15vh;
+    min-height: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,6 +68,49 @@ section h2 {
 
 section p {
     margin-bottom: 15px;
+}
+
+.presentacion {
+    text-align: center;
+}
+
+.presentacion-contenido {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.presentacion-foto {
+    display: flex;
+    justify-content: center;
+}
+
+.presentacion-video {
+    text-align: left;
+}
+
+.presentacion-video h3 {
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+.video-placeholder {
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    background: #f8fafc;
+    border: 2px dashed #93c5fd;
+    border-radius: 15px;
+    color: #64748b;
+}
+
+.video-placeholder p {
+    margin-bottom: 5px;
 }
 
 .perfil-contenedor {
@@ -167,6 +210,35 @@ article h3 {
     transform: translateX(6px);
 }
 
+#evidencias {
+    text-align: center;
+}
+
+.descripcion-evidencias {
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.evidencias-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-align: left;
+}
+
+.evidencia {
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+.evidencia:hover {
+    transform: translateY(-5px);
+}
+
+.evidencia h3 {
+    font-size: 1.3rem;
+}
+
 #contacto {
     text-align: center;
 }
@@ -213,6 +285,18 @@ header p {
 @media (max-width: 850px) {
 
     .perfil-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .presentacion-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .presentacion-video {
+        text-align: center;
+    }
+
+    .evidencias-grid {
         grid-template-columns: 1fr;
     }
 
