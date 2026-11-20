@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Magic Cards | Bases de Datos 1</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .proyecto-intro { margin-bottom: 28px; }
+        .proyecto-datos { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; margin:24px 0; }
+        .dato-proyecto { background:#eff6ff; border-radius:12px; padding:16px; border-left:4px solid #2563eb; }
+        .dato-proyecto strong { display:block; color:#1e3a8a; }
+        .proyecto-seccion { margin-top:28px; }
+        .proyecto-imagen { margin:18px auto; text-align:center; }
+        .proyecto-imagen img { display:block; width:100%; max-width:850px; height:auto; margin:auto; border-radius:10px; border:1px solid #dbeafe; }
+        .enlaces-proyecto { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+        .enlaces-proyecto article { margin:0; }
+        .nota-proyecto { background:#f8fafc; border-left:4px solid #64748b; padding:16px 20px; border-radius:10px; }
+        @media(max-width:700px) { .enlaces-proyecto { grid-template-columns:1fr; } }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Magic Cards</h1>
+    <p>Proyecto final — Bases de Datos 1</p>
+</header>
+<main>
+<section class="pagina-evidencias">
+    <a href="../index.html" class="volver">← Volver al E-Portafolio</a>
+    <div class="proyecto-intro">
+        <h2>Plataforma de inventario y reservas de cartas coleccionables</h2>
+        <p>Magic Cards es un sistema orientado a administrar el inventario de una tienda de cartas coleccionables de <em>Magic: The Gathering</em>. El modelo contempla cada ejemplar de manera individual, registra su condición y precio de referencia, y permite gestionar reservas para clientes.</p>
+        <p>El alcance se centra en el inventario y las reservas; no contempla ventas, compras, pagos ni facturación.</p>
+    </div>
+    <div class="proyecto-datos">
+        <div class="dato-proyecto"><strong>Asignatura</strong>Bases de Datos 1</div>
+        <div class="dato-proyecto"><strong>Institución</strong>Universidad El Bosque</div>
+        <div class="dato-proyecto"><strong>Periodo</strong>2026-2</div>
+        <div class="dato-proyecto"><strong>RDBMS</strong>MySQL 8.x</div>
+    </div>
+    <div class="proyecto-seccion">
+        <h2>Diseño de la base de datos</h2>
+        <article>
+            <h3>Modelo Entidad-Relación Extendido</h3>
+            <p>Diagrama general del modelo conceptual de Magic Cards.</p>
+            <div class="proyecto-imagen"><img src="https://raw.githubusercontent.com/Ande2323/ProyectoBasesDatosI/main/Magic_Cards.drawio%20(1).png" alt="Diagrama del modelo entidad-relación extendido de Magic Cards"></div>
+        </article>
+        <article>
+            <h3>Modelo lógico</h3>
+            <p>Representación lógica de las entidades, atributos y relaciones del sistema.</p>
+            <div class="proyecto-imagen"><img src="https://raw.githubusercontent.com/Ande2323/ProyectoBasesDatosI/main/LogicalMagic.png" alt="Modelo lógico de la base de datos Magic Cards"></div>
+        </article>
+        <article>
+            <h3>Modelo relacional</h3>
+            <p>Esquema relacional utilizado como base para la implementación.</p>
+            <div class="proyecto-imagen"><img src="https://raw.githubusercontent.com/Ande2323/ProyectoBasesDatosI/main/Relational_Magic.png" alt="Modelo relacional de Magic Cards"></div>
+        </article>
+    </div>
+    <div class="proyecto-seccion">
+        <h2>Documentos y entregables</h2>
+        <div class="enlaces-proyecto">
+            <article><h3>Propuesta del proyecto</h3><p>Planteamiento, alcance y descripción inicial del sistema.</p><a class="boton-evidencia" href="https://github.com/Ande2323/ProyectoBasesDatosI/blob/main/Propuesta_Proyecto_BD1.pdf" target="_blank" rel="noopener noreferrer">Consultar propuesta</a></article>
+            <article><h3>Álgebra relacional</h3><p>Consultas y operaciones relacionales aplicadas al modelo.</p><a class="boton-evidencia" href="https://github.com/Ande2323/ProyectoBasesDatosI/blob/main/Algebra_Relacional_Magic_Cards.pdf" target="_blank" rel="noopener noreferrer">Consultar documento</a></article>
+            <article><h3>Diccionario de datos</h3><p>Descripción de las tablas y los elementos que conforman la base de datos.</p><a class="boton-evidencia" href="https://github.com/Ande2323/ProyectoBasesDatosI/blob/main/Diccionario_de_Datos_Magic_Cards.pdf" target="_blank" rel="noopener noreferrer">Consultar diccionario</a></article>
+            <article><h3>Normalización</h3><p>Documento del proceso de normalización del modelo hasta tercera forma normal.</p><a class="boton-evidencia" href="https://github.com/Ande2323/ProyectoBasesDatosI/blob/main/Normalizacion_3FN_Magic_BD.pdf" target="_blank" rel="noopener noreferrer">Consultar normalización</a></article>
+            <article><h3>Modelo lógico detallado</h3><p>Documento complementario del diseño lógico de la base de datos.</p><a class="boton-evidencia" href="https://github.com/Ande2323/ProyectoBasesDatosI/blob/main/Relational_1MANUAL.pdf" target="_blank" rel="noopener noreferrer">Consultar documento</a></article>
+        </div>
+    </div>
+    <div class="proyecto-seccion">
+        <h2>Repositorio y código fuente</h2>
+        <article><h3>Implementación del proyecto</h3><p>El repositorio del equipo reúne el código fuente, los scripts SQL, la documentación técnica y los demás archivos de trabajo.</p><a class="boton-evidencia" href="https://github.com/Ande2323/ProyectoBasesDatosI" target="_blank" rel="noopener noreferrer">Ver repositorio completo en GitHub</a></article>
+    </div>
+    <p class="nota-proyecto">Esta página presenta una selección de evidencias del proyecto. Los archivos completos y las versiones más recientes se consultan en el repositorio del equipo.</p>
+</section>
+</main>
+<footer><p>© 2026 Daniel Gómez — E-Portafolio</p></footer>
+</body>
+</html>
