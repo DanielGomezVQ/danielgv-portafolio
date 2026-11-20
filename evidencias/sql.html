@@ -1,3 +1,49 @@
 <!DOCTYPE html>
-<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>SQL | Bases de Datos 1</title><link rel="stylesheet" href="../style.css"></head>
-<body><header><h1>SQL</h1><p>Bases de Datos 1 — E-Portafolio</p></header><main><section class="pagina-evidencias"><a href="../index.html" class="volver">← Volver al E-Portafolio</a><h2>Consultas e implementación SQL</h2><p>Esta sección reúne el trabajo de consultas SQL y la implementación de bases de datos desarrollado durante el curso.</p><article><h3>Práctica con Oracle SQL Developer — esquema HR</h3><p>Ejercicios de consulta sobre las tablas EMPLOYEES y DEPARTMENTS: filtros, ordenamiento, funciones de agregación, GROUP BY, HAVING, JOIN y subconsultas correlacionadas.</p><p>La documentación individual de cada ejercicio se completará con su enunciado, sentencia SQL, explicación breve y captura del resultado.</p></article><article><h3>Scripts del proyecto Magic Cards</h3><p>El proyecto final incluye scripts de definición de estructura (DDL), manipulación de datos (DML) y pruebas SQL.</p><a class="boton-evidencia" href="https://github.com/Ande2323/ProyectoBasesDatosI" target="_blank" rel="noopener noreferrer">Consultar código y scripts del equipo</a></article></section></main><footer><p>© 2026 Daniel Gómez — E-Portafolio</p></footer></body></html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SQL | Bases de Datos 1</title><link rel="stylesheet" href="../style.css">
+<style>
+.sql-ejemplo{background:#111827;color:#e5e7eb;padding:22px;border-radius:12px;overflow-x:auto;margin:18px 0}
+.sql-ejemplo pre{white-space:pre;line-height:1.65;font-family:Consolas,Monaco,monospace;font-size:.92rem}
+.sql-meta{color:#64748b;font-size:.95rem}
+</style>
+</head>
+<body>
+<header><h1>SQL</h1><p>Bases de Datos 1 — E-Portafolio</p></header>
+<main><section class="pagina-evidencias">
+<a href="../index.html" class="volver">← Volver al E-Portafolio</a>
+<h2>Consultas y ejercicios SQL</h2>
+<p>Prácticas realizadas con Oracle SQL Developer sobre el esquema de ejemplo HR, junto con los scripts SQL desarrollados para la implementación del proyecto Magic Cards.</p>
+<article>
+<h3>Ejemplo de consulta — empleados por departamento</h3>
+<p>Consulta que relaciona EMPLOYEES y DEPARTMENTS, agrupa los empleados por departamento y aplica condiciones sobre los resultados agregados.</p>
+<div class="sql-ejemplo"><pre><code>SELECT
+    d.department_id,
+    d.department_name,
+    COUNT(e.employee_id) AS total_empleados,
+    AVG(e.salary) AS salario_promedio
+FROM hr.departments d
+JOIN hr.employees e
+    ON e.department_id = d.department_id
+GROUP BY
+    d.department_id,
+    d.department_name
+HAVING COUNT(e.employee_id) &gt; 2
+   AND AVG(e.salary) &gt; 5000
+ORDER BY AVG(e.salary) DESC;</code></pre></div>
+<p class="sql-meta">Ejemplo de práctica con JOIN, GROUP BY, HAVING, COUNT, AVG y ORDER BY.</p>
+</article>
+<article>
+<h3>Scripts SQL del proyecto Magic Cards</h3>
+<p>El repositorio del equipo contiene scripts de creación de objetos (DDL), inserción de datos (DML) y consultas de pruebas.</p>
+<a class="boton-evidencia" href="https://github.com/Ande2323/ProyectoBasesDatosI/blob/main/Scripts.zip" target="_blank" rel="noopener noreferrer">Consultar scripts SQL</a>
+</article>
+<article>
+<h3>Prácticas de Oracle SQL Developer</h3>
+<p>Esta sección se ampliará con la evidencia individual de cada ejercicio: enunciado, consulta, explicación breve y captura del resultado ejecutado.</p>
+</article>
+<a class="boton-evidencia" href="https://github.com/Ande2323/ProyectoBasesDatosI" target="_blank" rel="noopener noreferrer">Ver repositorio completo del proyecto</a>
+</section></main>
+<footer><p>© 2026 Daniel Gómez — E-Portafolio</p></footer>
+</body></html>
